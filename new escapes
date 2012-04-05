@@ -1,0 +1,4 @@
+\a, audible bell, is an allowed character escape, and has the value 7.
+\e, escape, is an allowed character escape, and has the value 27.
+\v, vertical tab, is an allowed character escape, and has the value 11.
+

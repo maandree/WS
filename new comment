@@ -1,0 +1,5 @@
+A line may include a \\ (backslash, backslash), if that is the case a line,
+everything before the \\ is a comment. // (slash, slash) takes priority over
+\\, meaning that //\\ (slash, slash, backslash, backslash) is parsed as a
+classic // comment.
+

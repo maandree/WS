@@ -1,0 +1,5 @@
+synchronized (...)     can be written     synchronized (...)
+{                                             ;
+    ;
+}
+

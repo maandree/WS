@@ -1,0 +1,32 @@
+Unescaped strings:
+
+    @"x\z"  -->  "x\\z"
+
+
+
+Rich strings:
+
+    $"xyz"  -->  "<html>xyz</html>"
+
+
+
+Unescaped rich strings:
+
+    @$"x\z"  -->  "<html>x\\z</html>"
+
+
+
+Literal concats:
+
+    "x" "yz"  -->  "xyz"
+    "x""yz"   -->  "x\"yz"
+
+
+
+++ strings:
+
+    ++"xyz"  -->  "\nxyz"
+    "xyz"++  -->  "xyz\n"
+    ++ may be added any number of times.
+
+

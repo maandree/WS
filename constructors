@@ -1,0 +1,29 @@
+A constructor ca be written without the classname, but with new instead:
+
+    <modifier> new(...)
+    {
+        ...
+    }
+
+
+
+Only for constructors, if a parameter (variable in the brackets after new/the classname)
+is named, for example xyz, and there is an instance variable with same name,
+
+    xyz =;        // =; must not have any spaces
+
+is allowed and compiles to
+
+    this.xyz = xyz;
+
+
+If the same applies to x, y and z
+
+    this.\{x,y,z} =;        // bracket mismatch in emacs
+
+is allowed and compiles to
+
+    this.x = x;
+    this.y = y;
+    this.z = z;
+

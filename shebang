@@ -1,0 +1,3 @@
+The first line may start with #! (hash, bang), if this is the case for a
+file, that entire line will be ignored.
+

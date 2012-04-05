@@ -1,0 +1,13 @@
+try (...)           can be written          try (...)
+{                                               ;
+    ;                                       catch (...)
+}                                               ;
+catch (...)                                 finally
+{                                               ;
+    ;
+}
+finally
+{
+    ;
+}
+
