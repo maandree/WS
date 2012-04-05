@@ -1,0 +1,45 @@
+stackfor:
+
+        for[i : n](int j[i] = S(i); C(j, i); I(j, i))
+            ... /*code that runs for all i!!*/
+        
+        --TO--
+        
+        
+        {
+            int i = -1;
+            int[] j = new int[n];
+            $1:
+                for (;;)
+                {
+                    for (i = i + 1; i < n; i++)
+                    {
+                        j[i] = S(i);
+                        ...
+                    }
+                    for (j[i] = S(i); C(j, i); I(j, i))
+                        ...
+                    for (;;)
+                    {
+                        if (--i < 0)
+                            break $1;
+                        I(j, i);
+                        if (C(j, i))
+                        {
+                            ...
+                            break
+                        }
+                    }
+                }
+        }
+        
+        
+        --FURTHER--
+        
+        When break:ing, continue:ing and again:ing stackfor:s,
+        the stack may be multipopped (or whatever) by specified 
+        how much it should be popped, default is 1, but after
+        the label (if any) and expression may be added, a * tells
+        to pop everything.
+        
+        It is also possible not declare anything in the for init. statement.

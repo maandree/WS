@@ -1,0 +1,7 @@
+Keyword 'package private' may used for default visibility.
+
+
+@SuppressWarnings("visible")
+
+Should be used on non-private variables that are not final.
+

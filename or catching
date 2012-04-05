@@ -1,0 +1,12 @@
+<STATEMENT> or die;               -->  System.exit(1);  on failure
+<STATEMENT> or die #;             -->  System.exit(#);  on failure
+<STATEMENT> or die trying;        -->  System.exit(1);  on failure
+<STATEMENT> or break;             -->  break;  on failure
+<STATEMENT> or continue;          -->  continue;  on failure
+<STATEMENT> or again;             -->  again;  on failure
+<STATEMENT> or return;            -->  return;  on failure
+<STATEMENT> or return <VALUE>;    -->  return <VALUE>;  on failure
+<STATEMENT> or throw <VALUE>;     -->  throw <VALUE>;  on failure
+<STATEMENT> or resume;            -->  goto next statemetn on failure
+<STATEMENT> or resume next;       -->  goto next statemetn on failure
+<STATEMENT> or continue trying #; -->  try # times, afterwish it throws

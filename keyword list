@@ -3,6 +3,7 @@ new strict keywords:
 package private
 while this loops has not been broken
 forever
+again
 
 
 
@@ -13,3 +14,8 @@ moveable
 ordered
 unordered
 macro
+or
+die
+trying
+resume
+next

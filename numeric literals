@@ -1,0 +1,32 @@
+Underscores (_) and blankspaces ( ) may be added between the digits
+in numerals, but after the last digit underscore is not allowed. An
+underscore before the first will cause the word to be a name rather
+than a literal. Underscore and spaces may neither be added before
+the prependices:
+
+            BASE:             ALLOWED TYPE APPENDIX
+    0x      Hexadecimal       s, S, l, L
+    0b      Binary            b, B, s, S, l, L
+    0o      Octal             b, B, s, S, l, L
+    0       Octal             b, B, s, S, l, L
+    0z	    (se below)        (none)
+    (none)  Decimal           b, B, s, S, l, L
+
+If the prependix 0z is used, an integer appendix between 2 and 36
+inclusively must be added. The appendix may have leading zeroes and is
+written in subscript, that is using ₀₁₂₃₄₅₆₇₈₉ rather than 0123456789.
+
+A type appendix may be added; s and S stands for short, l and L stands for
+long, and b and B stands for byte, int is default.
+
+For other integers than just a zero, optionally with a type appendix,
+any non-negative integer may be added in superscript (⁰¹²³⁴⁵⁶⁷⁸⁹), to
+raise the value to a power.
+
+
+Float numbers may use neither of the appendices nor the prependices,
+but the type appendices f and F (for float, which is default) and d and D
+(for double) may be used.
+
+The underscore rules still applies around the dots in floats.
+An additional dot is allowed to create recurring decimals.
