@@ -1,0 +1,4 @@
+Keyword 'again' is allowed in loops in for loops an enhanced for loops.
+'again' causes the loop to run again, if the conditions are meet, but
+the first part of the for loop head (typically containing i++) will not
+run; for enhanced for loops the same element is used.

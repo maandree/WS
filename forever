@@ -1,0 +1,4 @@
+Keyword 'forever' compiles to 'for (;;)'.
+
+Additionally the keywork 'while this loop has not been broken' also
+compiles to 'for (;;)'.

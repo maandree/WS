@@ -1,0 +1,4 @@
+A fall through in a switch is only allowed if a 'continue' is added
+where the fall through is located.
+
+Cases without any code should not have this 'continue'.

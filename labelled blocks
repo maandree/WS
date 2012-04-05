@@ -1,0 +1,4 @@
+Blocks, that is, code inside curly brackets inside a method, can be labled,
+just like a loop, if-statements, switch-statements, &c, may also be labled.
+
+If a block as the label xyz, 'break xyz;' is allowed and breaks the block.

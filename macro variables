@@ -1,0 +1,11 @@
+Prepending the keyword 'macro' to a declaration will cause the value to
+be evaluated when the values is requested. Assignment on such a variable
+will override the macro. This facilities is only allowed directly inside
+methods, that is, on local declarations.
+
+macro int n = list.size();
+//n == 5
+list.add(null);
+//n == 6
+n = list.size() / 2; //or  n /= 2;
+//n == 3

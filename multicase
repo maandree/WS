@@ -1,0 +1,9 @@
+In a switch a case can have multiple values.
+
+case x, y, z:
+
+compiles to
+
+case x:
+case y:
+case z:
