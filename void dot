@@ -1,0 +1,16 @@
+x .= .f(a);    compiles to     x = x.f(a);
+
+
+
+str = .substring(1, .lenght() - 1);
+
+compiles to
+
+str = str.substring(1, str.length() - 1);
+
+
+
+nested = is allowed, so the number of dots determines level, nesting order (not unnesting order).
+.= is still allowed when this is used; it is the only assignment which does not create such a level.
+
+

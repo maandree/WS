@@ -1,0 +1,17 @@
+All unary operators (does not inclide prefix and postfix (++x, --x, x++, x--])
+can be made assigning by adding a bang in the after the variable:
+
+    !x!       compiles to     x = !x
+    
+    ~x!       compiles to     x = ~x
+    
+    -x!       compiles to     x = -x
+    
+    +x!       compiles to     x = +x      ; no, +x does not make sense, but for
+                                          ; reasones beyond my comprehension, it does exist
+                                        
+    <>x!      compiles to     x = <>x     ; new operator
+    
+    <!>x!     compiles to     x = <!>x    ; new operator
+
+

@@ -1,0 +1,21 @@
+The following two are synonyms
+
+    x ?= a : b
+    
+    x = x ? a : b
+
+
+The following two are synonyms
+
+    a &&= b
+    
+    a = a && b
+
+
+The following two are synonyms
+
+    a ||= b
+    
+    a = a || b
+
+

@@ -1,0 +1,24 @@
+The follow two are synonyms
+
+    x >:= a
+    x = x >: a;
+
+
+The follow two are synonyms (if all values are evaluated)
+
+    x = y >: a;
+    x = y > a ? y : a;
+
+
+The follow two are synonyms
+
+    x <:= b;
+    x = x <: a;
+
+
+The follow two are synonyms (if all values are evaluated)
+
+    x = y <: a;
+    x = y < a ? y : a;
+
+

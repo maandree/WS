@@ -1,0 +1,3 @@
+x :=  cond : a     compiles to     x = cond ? a : x
+x := !cond : a     compiles to     x = cond ? x : a
+

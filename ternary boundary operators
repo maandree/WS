@@ -1,0 +1,17 @@
+The follow two are synonyms (if all values are evaluated)
+
+    x = y :: a : b
+    
+    
+    y < a ? x = a :
+    y > b ? x = b :
+            x = y;
+
+
+
+x = x :: a : b
+
+can be written
+
+x ::= a : b
+

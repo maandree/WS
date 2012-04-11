@@ -1,0 +1,17 @@
+<>x       returns x with reverse bit order
+<!>x      returns x with reverse byte order
+
+x <<< y   shifts x to higher bit order y steps, and fills in with ones iff the lowest bit is a one.
+
+x <<<< y  rotates x to higher bit order y steps, that shift and fills in with overflowed bits.
+x >>>> y  rotates x to lower bit order y steps, that shift and fills in with overflowed bits.
+
+x <<<= y   compiles to  x = x <<< y;
+x <<<<= y  compiles to  x = x <<<< y;
+x >>>>= y  compiles to  x = x >>>> y;
+
+The new unary postfix operator (not assigning):
+
+    x:?     compiles to     x ? 1 : 0
+
+
