@@ -1,0 +1,18 @@
+In mathematical syntax
+
+   x < y < z
+
+checks x < y and y < z, in Java this would check x < y, and
+the compare the returning boolean to z.
+
+The allow syntax like this .-operations are added, by prepending
+a slash the mathematical syntax is used.
+
+   a .< b .> c .== d .!= e .<= f .>= g
+
+compiles to
+
+   (a < b) && (b < c) && (c == d) && (d == e)
+   && (e != f) && (f <= g) && (g >= g)
+
+Any relational or equality operaion may have a dot before it.

@@ -1,0 +1,31 @@
+The relational comparsion operators, that is,
+<, >, <= and >=, and any derivative, may have
+an up-close + before the operator, to make ut
+unsigned.
+
+a +< b  performed a < b, but handles a and b
+as unsigned, instead of signed. This as no
+effect on char, and is only allowed for
+char, byte, short, int and long, not for
+float and double. However it suffices that
+only one of the variables is of those types.
++>, +<= and +>= works in this way too.
+
+char is an unsigned 16-bit integer, and is
+(as mentioned) thus not affected. There is no
+analogue way to handle char data as signed;
+rather you may cast char to short for that
+effect.
+
++== and +!= doesn't exists either as equality
+operations or uneffected by the signum of the
+data.
+
+float and double could also be allowed for
+this comparisons, but float and double is neiter
+simple bit arrays nor data that changes signum
+on overflow.
+
+This addition should be enough, and perhaps
+simples and cleanest way, to support both signed
+and unsigned integer data types.

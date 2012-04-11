@@ -1,4 +1,4 @@
-Keyword 'package private' may used for default visibility.
+Keyword 'package private' or just 'package' may used for default visibility.
 
 
 @SuppressWarnings("visible")
