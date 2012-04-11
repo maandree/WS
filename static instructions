@@ -1,0 +1,79 @@
+Examples
+
+
+public void method()         compiles to    private int $1 = default;
+{                                           private boolean $1init = true;
+    static int x = 12;                      public void method()
+                                            {
+    static                                      if ($1init)
+    [{]                                             $1 = 12;
+        x <<= 2;                                
+    [}]                                         if ($1init)
+}                                               [{]
+                                                    $1 <<= 1;
+                                                [}]
+                                            }
+
+
+public static void method()   compiles to   private static int $1 = default;
+{                                           private static boolean $1init = true;
+    static int x = 12;                      public static void method()
+                                            {
+    static                                      try
+    [{]                                         {
+        x <<= 2;                                    if ($1init)
+    [}]                                                 $1 = 12;
+
+                                                    if ($1init)
+}                                                   [{]
+                                                        $1 <<= 1;
+                                                    [}]
+                                                }
+                                                finally
+                                                {
+                                                     $1init = false;
+                                                }
+                                            }
+
+
+public void method()        compiles to     private static int $1 = default;
+{                                           private static boolean $1init = true;
+    static static int x = 12;               public static void method()
+                                            {
+    static static                               try
+    [{]                                         {
+        x <<= 2;                                    if ($1init)
+    [}]                                                 $1 = 12;
+
+                                                    if ($1init)
+}                                                   [{]
+                                                        $1 <<= 1;
+                                                    [}]
+                                                }
+                                                finally
+                                                {
+                                                    $1init = false;
+                                                }
+                                            }
+
+
+public void method()        compiles to     private static int $1 = default;
+{                                           private static boolean $1init = true;
+    !static int x = 12;                     public static void method()
+                                            {
+    !static                                     try
+    [{]                                         {
+        x <<= 2;                                    if ($1init)
+    [}]                                                 $1 = 12;
+
+                                                    if ($1init)
+}                                                   [{]
+                                                        $1 <<= 1;
+                                                    [}]
+                                                }
+                                                finally
+                                                {
+                                                    $1init = false;
+                                                }
+                                            }
+

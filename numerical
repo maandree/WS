@@ -1,0 +1,17 @@
+public <T numerical> method(T num);
+
+compiles to
+
+public method(byte num);
+public method(short num);
+public method(int num);
+public method(long num);
+public method(float num);
+public method(double num);
+
+
+The compiled to datatypes can be selected, in the following
+example all allowed are used.
+
+    public <T numerical : boolean, char, byte, short,
+            int, long, float, double> method(T num);

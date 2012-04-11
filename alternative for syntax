@@ -1,0 +1,22 @@
+for (T a <= x <= b; f(x))   compiles to   for (T x = a; x <= b; f(x))
+for (T a <= x < b; f(x))    compiles to   for (T x = a; x < b; f(x))
+for (T a < x <= b; f(x))    compiles to   for (T x = f(a); x <= b; f(x))
+for (T a < x < b; f(x))     compiles to   for (T x = f(a); x < b; f(x))
+
+for (T a <= f(x) <= b)      compiles to   for (T x = a; x <= b; f(x))
+for (T a <= f(x) < b)       compiles to   for (T x = a; x < b; f(x))
+for (T a < f(x) <= b)       compiles to   for (T x = f(a); x <= b; f(x))
+for (T a < f(x) < b)        compiles to   for (T x = f(a); x < b; f(x))
+
+for (a <= x <= b; f(x))     compiles to   for (x = a; x <= b; f(x))
+for (a <= x < b; f(x))      compiles to   for (x = a; x < b; f(x))
+for (a < x <= b; f(x))      compiles to   for (x = f(a); x <= b; f(x))
+for (a < x < b; f(x))       compiles to   for (x = f(a); x < b; f(x))
+
+for (a <= f(x) <= b)        compiles to   for (x = a; x <= b; f(x))
+for (a <= f(x) < b)         compiles to   for (x = a; x < b; f(x))
+for (a < f(x) <= b)         compiles to   for (x = f(a); x <= b; f(x))
+for (a < f(x) < b)          compiles to   for (x = f(a); x < b; f(x))
+
+
+f(x) much do assigment to x on the top level.

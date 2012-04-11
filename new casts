@@ -1,0 +1,21 @@
+Truncated bitwise casting of any primitive type:
+
+    (type!)scalar
+
+
+Primitive multiarray casting:
+
+    (arraytype!)array
+
+    example:
+
+	(long[]!) new int[10]
+	
+	is the same thing as
+
+	new long[10]
+
+
+The two combined:
+
+    (arraytype!!)array
