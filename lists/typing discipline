@@ -1,0 +1,37 @@
+J, markes coherence with Java.
+
+Type safety: ?
+
+Inferred: no   J
+Manifest: yes  J
+> Manifest typing helps the programmer keep track of
+  what everything is, and how to work with the data.
+
+Dynamic: no   J
+Static:  yes  J
+> Less bug-prone, for same reason as inferred vs manifest.
+
+Strong: yes  J
+Weak:   no   J
+> Se above. Weak typing may be cleaner, but more confusing.
+
+Nominative: yes  J
+Structural: no   J
+> Why would anyone want to use a structural typing language?
+
+Duck: no  J
+> Duck typing is prone to unmaintainable code; you have no
+  clue what even you self have written.
+  It is also prone to many bugs.
+
+Uniqueness: no  J
+> This may be implemented later however.
+
+Safe:       yes  J
+> A must for high-level languages.
+
+Latent:     no  J
+Implicit:   no  J
+Linear:     no  J
+Affine:     no  J
+Dependent:  no  J
