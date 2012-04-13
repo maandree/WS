@@ -27,7 +27,7 @@ Duck: no  J
 Uniqueness: no  J
 > This may be implemented later however.
 
-Safe:       yes  J
+Safe: yes  J
 > A must for high-level languages.
 
 Latent:     no  J
