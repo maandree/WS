@@ -1,6 +1,6 @@
 The relational comparsion operators, that is,
 <, >, <= and >=, and any derivative, may have
-an up-close + before the operator, to make ut
+an up-close + before the operator, to make them
 unsigned.
 
 a +< b  performed a < b, but handles a and b
@@ -25,6 +25,11 @@ float and double could also be allowed for
 this comparisons, but float and double is neiter
 simple bit arrays nor data that changes signum
 on overflow.
+
+Similar to >>> being an unsigned version of >>,
++/ is an unsigned version of /. % also need an
+unsigned version; analoguely +% is the unsigned
+version of %.
 
 This addition should be enough, and perhaps
 simples and cleanest way, to support both signed
