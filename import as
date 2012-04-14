@@ -1,0 +1,11 @@
+import a.b.X as Y;
+
+Imports a.b.X and renames it to Y rather than X.
+
+
+import static a.b.X.Y as Z;
+
+Imports a.b.X.Y and renames it to Z rather than Y.
+
+
+'as' is not allowed wildcard (*) is used.

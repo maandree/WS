@@ -1,0 +1,112 @@
+int x(int a) & y(int b) & z()
+{
+	//...
+}
+
+
+When x(int) is invoked, the thread will wait
+(if needed) until both y(int) and z() has been
+invoked, and then run x(int).
+
+The code above, defines:
+    int x(int)
+    void y(int)
+    void z()
+
+y(int) and z() does nothing.
+
+The invocation of y(int) and z() is queue, with it parameters.
+x(int) polls the invocations received the parameter from y(int).
+
+
+Methods (having &) can be invoked in any order, unless,
+the class have 'ordered', in which case the methods with the
+same names and paremeters must be invoked in order.
+'unordered' is the default, and does not need to be explicit:
+
+public ordered class OrderedJoinClass
+{
+	int x(int a) & y(int b) & z()
+	{	
+		//wait for an invokation of y(int) and z()
+	}
+	
+	int x(int a) & w()
+	{	
+		//wait for an invokation of x(int) & y(int) & z() and w()
+	}
+	
+	void x(int a)
+	{
+		//waits for an invokation of x(int) & w()
+	}
+	
+	void x(int a, int b)
+	{
+		//does not wait
+	}
+	
+	void v() & u()
+	{	
+		//waits for u()
+	}
+}
+
+public /*unordered*/ class UnorderedJoinClass
+{
+	int x(int a) & y(int b) & z()
+	{	
+		//wait for an invokation of y(int) and z()
+	}
+	
+	int x(int a) & w()
+	{	
+		//wait for an invokation of w()
+	}
+	
+	void x(int a)
+	{
+		//does not wait
+	}
+	
+	void x(int a, int b)
+	{
+		//does not wait
+	}
+	
+	void v() & u()
+	{	
+		//waits for u()
+	}
+}
+
+
+A void method can also be threaded, by using void:threaded (spaces are allowed) instead of void.
+A theaded method can also be made nice, nasty or a daemon:
+
+  	void:threaded             --> non-daemon the 5 in priority (normal; nice value 0)
+	void:threaded[]           --> same as void:threaded
+        void:threaded[2]     	  --> thread priority 2 of 1..10 (nice, 2 of -20..20)
+	void:threaded[daemon]     --> daemon thread
+	void:threaded[9, daemon]  --> nasty daemon
+	void:threaded[daemon, 2]  --> nice daemon
+
+
+A method can also be moveable, meaning that it will be aim for being executed on another computer (cluster computing)
+
+    	void:moveable             --> movable with fallback to void:threaded
+	void:moveable[]           --> movable with fallback to void:threaded[]
+        void:moveable[2]     	  --> movable with fallback to void:threaded[2]
+	void:moveable[daemon]     --> movable with fallback to void:threaded[daemon]
+	void:moveable[9, daemon]  --> movable with fallback to void:threaded[9, daemon]
+	void:moveable[daemon, 2]  --> movable with fallback to void:threaded[daemon, 2]
+
+
+
+It also possible to return values when using :threaded and :movable.
+When invoking an asynchoronous method that is not void, and store the result
+in a variable, the invoking thread will wait for the asynchoronous method to
+finish when the value is being read for the first time.
+
+At then and of a try-clause the thread waits for all it's asynchoronous methods
+to complete so that their exceptions may be caught.

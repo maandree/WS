@@ -1,0 +1,4 @@
+x?.y.z? ?? n
+
+returns x.y.z, but iff x or z is null,
+then n is returned.
