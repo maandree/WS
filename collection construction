@@ -1,0 +1,10 @@
+When an object is created, { } can be used in a similary fashion to
+when used on array constructions. But for clarity nested use is not
+allowed!
+
+After { } you may add ( ) with constructor parameters. And in the end
+you can add -> followed by a method name to specify which method to
+use to insert items; 'add' is default for singleelement insertions,
+and 'put' is default for multielement insertions.
+To create a multielement insertion, seperate the elements with ->
+in the same order as specified in the insertion method.

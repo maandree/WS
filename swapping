@@ -1,9 +1,9 @@
 x <--> y                    swaps x and y
-x --> y --> z <--> w        swaps x to y, y to z, z to w, and w to x
-x <-- y <-- z <--> w        swaps w to z, z to y, y to x, and x to w
+x >--> y >--> z <--> w      swaps x to y, y to z, z to w, and w to x
+x <--< y <--< z <--> w      swaps w to z, z to y, y to x, and x to w
 
---> and <-- is used to indicate replacement direction, and <--> is added
-the end to indicate circular swapping, and is required.
+>--> and <--< is used to indicate replacement direction, and <--> is
+added the end to indicate circular swapping, and is required.
 
 for x <--> y, that is two variable swapping,
 the C code

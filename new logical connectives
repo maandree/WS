@@ -1,0 +1,25 @@
+Without assignment:
+
+                     bitwise    logical
+
+nand                      ~&    ~&&
+nor                       ~|    ~||
+
+Converse implication      ~~<     ~~<<
+Implication               ~~>     ~~>>
+Nonimplication            ~/~>    ~/~>>
+Converse nonimplication   ~/~<    ~/~<<
+
+
+With assignment:
+
+                     bitwise    logical
+
+nand                      ~&=   ~&&=
+nor                       ~|=   ~||=
+
+Converse implication      ~~<=    ~~<<=
+Implication               ~~>=    ~~>>=
+Nonimplication            ~/~>=   ~/~>>=
+Converse nonimplication   ~/~<=   ~/~<<=
+

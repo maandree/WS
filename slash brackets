@@ -25,6 +25,22 @@ Keep in mind that the (in this case) left operand is not evaluated.
 \(x[i++] == a \|| b)   compiles to  ((x[i++] == a) || (x[i++] == b))
 
 
+The slashed bracket can be a part of a method invokation:
+
+    x.substring\(a \, b, c);
+
+    compiles to
+    
+    x.substring(a);
+    x.substring(b, c);
+
+    and
+    
+    x.equals\(a \|| b)
+    
+    x.equals(a) || x.equals(b)
+
+
 
 
 CONSIDERED SYNTAX::
