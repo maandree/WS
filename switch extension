@@ -1,0 +1,11 @@
+Classes (without) .class in the end can be used as cases in switches.
+
+switch+		  Allows non constant cases, the plus (+) can be added to any switch (after the operator)
+switch=		  Uses VAR.equals(CASE)
+switch~=	  Uses VAR.equalsIgnoreCase(CASE)  [Strings only]
+switch<		  Uses VAR < CASE instead of VAR == CASE
+switch>		  Uses VAR > CASE instead of VAR == CASE
+switch<=	  Uses VAR <= CASE instead of VAR == CASE
+switch>=	  Uses VAR >= CASE instead of VAR == CASE
+switch!=	  Uses VAR != CASE instead of VAR == CASE
+

@@ -1,0 +1,29 @@
+a <=> b
+
+
+returns -1 iff a < b,
+	+1 iff a > b,
+	and 0 iff a = b.
+
+
+
+
+
+switch (a <=> b)
+{
+	case <:	// ...A
+	case =: // ...B
+	case >: // ...C
+}
+
+
+compiles to
+
+
+switch (a <=> b)
+{
+	case -1: // ...A        // Last case is converted to a default, 
+	case 0: // ...B         // cases by be specified in any order, 
+	default: // ..C		// but all must be specified.
+}
+
