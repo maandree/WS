@@ -1,0 +1,35 @@
+Sometimes we want to extend final class like String.
+
+This can be done in C# but we have come to that conclusion that if implemented
+we should also allow multiple superclasses; this can not be done in a sane way.
+
+The syntax for the REJECTED extension is:
+
+        public class extends SUPERCLASS : EXTENSION_CLASS
+	{
+	    //constructor free
+
+	    public RETURN METHOD(...........)
+   	    {
+		//..............
+       	    }
+    	}
+    
+    
+        Which compiles to a class named EXTENSION_CLASS
+	with a private construction that throws an Error.
+	All elements are made static, and non-static
+	elements are converted in a fashion that they
+	can be used by calling a static method with the
+	first parameter being called $this and is of the
+	type SUPERCLASS. And all invocates are fixed.
+
+
+
+The solution for the multiple implemention problem with extension classes
+is the introduction of the # dereferensing. It as precedence just below the
+. dereferensing, and puts the code before the # as the first parameter in
+the method specificed after the #. You must (or rather should) import,
+statically, the extension methods, so that the class owning the implemention
+does not need to be specified.
+
