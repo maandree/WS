@@ -1,7 +1,7 @@
 Sometimes we want to extend final class like String.
 
 This can be done in C# but we have come to that conclusion that if implemented
-we should also allow multiple superclasses; this can not be done in a sane way.
+we should also allow multiple inheritance; this can not be done in a sane way.
 
 The syntax for the REJECTED extension is:
 
