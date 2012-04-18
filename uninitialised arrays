@@ -1,0 +1,11 @@
+THIS MAY NOT BE POSSIBLE USING JVM, AND WOULD REQUIRE FOREIGN CODE
+
+
+new T[n]? creates an one-dimensional array of lenght n and type T.
+The addendum ? tells the machine to set all elements to 0.
+new T[n][n] as time complexity 𝓞(n²), while new T[n][n]? ideally
+have time complexity 𝓞(1). Due to security reasons, kernels,
+initialises (sets everything to zeroes) memory space that is used
+for the first time by a program instanse. Therefore T[n][n]?
+have time complexity 𝓞(n²) but can be faster, and would have time
+complexity 𝓞(1) if the used kernel did not initialise memory.

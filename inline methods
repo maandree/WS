@@ -1,0 +1,10 @@
+By adding 'inline' in a method you tell the compiler to
+evaluate the method inplace of the method call.
+
+If you do not use 'public', 'protected' or 'saved' on the
+method is not included in the bytecode. Storing it in the
+bytecode premits call through reflection and so other programs
+to use the method (inline or not inline).
+
+'saved' is added directly infront if 'inline', with seperating
+whitespace.

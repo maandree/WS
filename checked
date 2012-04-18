@@ -1,0 +1,12 @@
+\+ performs checked addition, that normal addition (+),
+except it throws a runtime exception on overflow.
+To handle the variables as unsigned, use +\+
+
+\- performs checked subtraction, that normal subtraction (-),
+except it throws a runtime exception on overflow.
+To handle the variables as unsigned, use +\-
+
+\* performs checked multiplication, that normal multiplication (*),
+except it throws a runtime exception on overflow.
+To handle the variables as unsigned, use +\*
+

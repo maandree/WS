@@ -1,0 +1,7 @@
+A prototype method are only allowed in abstract classes.
+By adding 'prototype' instead of 'abstract' in a method head
+you make the method callable form subclasses, it is as no
+instructions. It must however still be overridden.
+If a method has 'prototype' you can add instructions to it
+just like a non-abstract method, and just for the subclass
+to override it or be abstract.

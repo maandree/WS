@@ -1,0 +1,16 @@
+By adding 'nullton' to a class head, you forbid it to have constructors.
+'nullton' creates as private constructor that throws an Error.
+Compilers do not accept calls to this constructor. By forbind contruction
+you also IMPLY static on elements.
+
+
+By adding 'singleton' to a class head, you apply a Singleton implemention
+to the class, it will have a public method 'getInstance()' for getting
+the only instance, this is however only for Java compatability. WS code
+must use 'SingletonClass.this' or 'new SingletonClass()'.
+
+
+By adding 'multiton<...>' to a class head, you apply a multikeyed
+Multiton implemention to the class that is used in the same way as
+'singleton'. Inside the < > after 'multiton' you specified the key
+types; you must use one or more keys.

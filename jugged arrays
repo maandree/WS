@@ -1,0 +1,15 @@
+Instead of [][] for a twodimension array, [,] can be used.
+The difference is that [,] (jugged array) is converted to
+a large one-dimension array and all dimension must be specified.
+
+The following is not possible with jugged array, but is
+with nested arrays (used here):
+
+        int[][] triangle = new int[10][];
+        for (int i = 0, k = 0; i < 10; i++)
+        {
+	     triangle[i] = new int[i];
+	     for (int j = 0; j < i; j++)
+	         triangle[i][j] = k++;
+        }
+

@@ -1,0 +1,18 @@
+A method may have multiple return values.
+If a method should return A and B, the method
+head looks like:
+
+     public [A, B] methodName()
+
+To return two values type:
+
+     return [a, b];
+
+
+This notation is ONLY allowed for returned.
+[a, b] = [b, a] for swapping a and b is NOT allowed.
+
+The the method doc, just add multplie @return.
+
+
+The return type is converted into a class. (Best compatibility with Java.)
