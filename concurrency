@@ -1,0 +1,17 @@
+double if (mutex; var)
+
+complies to
+
+if (var)
+   synchronized (mutex)
+   	if (var)
+
+double if, in constrast to if, may not have else.
+
+
+
+synchronized-- (mutex)
+
+performs a shared (read) lock, rathar than an exclusive
+(write) lock, which is what 'synchronized (mutex)' does.
+

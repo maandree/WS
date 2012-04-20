@@ -13,4 +13,26 @@ must use 'SingletonClass.this' or 'new SingletonClass()'.
 By adding 'multiton<...>' to a class head, you apply a multikeyed
 Multiton implemention to the class that is used in the same way as
 'singleton'. Inside the < > after 'multiton' you specified the key
-types; you must use one or more keys.
+types; you must use one or more keys. The 'MultitonClass.this' call
+as described for 'singleton' is not allowed for clarity reasons.
+
+
+Directly before, but with separating whitespace, 'singleton' and
+'multiton', either 'soft', 'weak' or 'strong' [implies if neither]
+can be added. 'soft' and 'weak' tells the compiler to use weak
+instance (not key) references. 'weak' means that if there are no
+references to the object it will be filed for garbage collection
+and, possibly before collection, a new instance will be created
+the next time the instance is requested. 'soft' work in the same
+way, but will, and is there the one fly are more likly to use,
+use the instance filed for garbage collection, and stop the
+garbage collection of that instance.
+
+
+After 'singleton' and between 'multiton' and '<...>' a question
+mark can be added to allow skipping the use of 'singleton' and
+'multiton', that is, creating a new object just as a normal 'new'
+(constructor) call. But for the 'new' keyword to have this effect
+for this case, a bang ('!') must be added between 'new' and the
+class name.
+

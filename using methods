@@ -1,0 +1,16 @@
+A bodyless (; instead of {}) method can, after the method parameters
+and join attributes, have the keywork 'using'. After 'using', either
+a class or a variable (can use 'new', to also create a new object)
+is specified. 'null' may only be used in runtime. This says the the
+method should invoke the method with the same name and parameters
+(types) from that class or object. If the method you want to use does
+not have the same name or parameters, the name of the method to use
+must be appended with a separating . (or # [see extension classes]).
+If the parameters are different, or if you do not want to use them
+as invoked, the arguments must also be specified inside round brackets.
+
+If a variable is used an = can be appended after the method specification;
+after the = an object, or null, is added, which is the next object to
+use when the method is invoked, instead of the current object. Instead
+of an object or 'null, 'return' can be used to switch to the returned
+object.

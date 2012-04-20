@@ -1,0 +1,2 @@
+z= can be used instead of = if you want to use lazy initialisation.
+Compilers should to the best it can not to evalute the variables.

@@ -1,0 +1,10 @@
+Instead of using 'extends', 'implements ... via ...' can be used.
+This does not use class specialisation ('extends'), but forbids
+use of it. Between 'implements' and 'via' an interface is added,
+while after 'via' and variable, that MAY be 'static' is specified.
+This variable must be declared inside the class, and do not need
+to be 'final'. More then one 'via' can be used in a classhead, but
+they by not share methods (combination of name and parameters), at
+all. Using 'via' will add methods to the class and implement it using
+the 'using' notation (see 'using methods').
+

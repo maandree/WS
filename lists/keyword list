@@ -28,3 +28,8 @@ singleton
 multiton
 inline
 saved
+using
+via
+weak
+soft
+strong
