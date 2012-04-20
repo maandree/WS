@@ -110,3 +110,15 @@ finish when the value is being read for the first time.
 
 At then and of a try-clause the thread waits for all it's asynchoronous methods
 to complete so that their exceptions may be caught.
+
+
+EXENSION:
+
+Method mentioned after '&' in method heads by have there code defined as
+a separate method. If not added, an empty method is equivalent.
+
+Call methods mentioned after '&' will not wait until the they have been
+collected by a join method (method before the first '&'), unless called
+as 'signal method(params) and wait'. Not if you don't want to wait, use
+a normal method invokation or, if clearer, just, 'signal method(params)'.
+

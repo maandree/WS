@@ -1,0 +1,12 @@
+Void methods may be called in a chain, of any lenght.
+
+'a() &> b()' calls 'a()' and iff no 'Throwable' was thrown,
+'b()' is invoked. If, however, a 'Throwable' was thrown, nothing
+more happens and the error is lost.
+
+'a() |> b()' calls 'a()' and iff a 'Throwable' was thrown,
+'b()' is invoked. If, however, a 'Throwable' was not thrown,
+nothing more happens and the error is lost.
+
+'a() ?> b() : c()' combines 'a() &> b()' and 'a() |> c()'.
+

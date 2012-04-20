@@ -1,0 +1,16 @@
+Non-assigning operators can be stacked. Lists operators,
+encapsulated inside round brackets; the operator will than
+be used in reverse order. The stack must be of at least
+length 2.
+
+x (^)(<<<<) y    ===    x ^ (x <<<< y)
+
+The stacked operation can be assigning by appending an
+equals sign upclose to the bracket:
+
+x (^)(<<<<)= y     ===    x = x ^ (x <<<< y)
+      or
+x (^) (<<<<)= y
+    but not
+x (^)(<<<<) = y
+
