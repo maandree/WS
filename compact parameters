@@ -1,0 +1,61 @@
+The modifiers, such as 'final', can be applied to all
+following character by putting a colon (:) after 'final'.
+
+void method(final: int x, short y, long z)
+compliles to
+void method(final int x, final short y, final long z)
+
+
+The modifier, can than be stopped from spreding in the
+same manner, but with a preceeding bang (!).
+
+void method(final: int x, short y, !final: long z)
+compliles to
+void method(final int x, final short y, long z)
+
+
+It is possible to this with multiple words at once.
+And even data types and object types is allowed.
+
+void method(final int: x, y, z)
+compliles to
+void method(final int x, final int y, final int z)
+
+
+When using a bang (!), only the first directly after
+it is removed.
+
+void method(final int: x, y, !int short: z)
+compliles to
+void method(final int x, final int y, final short z)
+
+
+If there is no word of the bang (!), all words are removed.
+
+void method(final int: x, y, !: short z)
+compliles to
+void method(final int x, final int y, short z)
+
+
+Data types, object types, and annotations override previously
+specified. Data types and object types are treated as the same.
+
+void method(final int: x, y, short: z)
+compliles to
+void method(final int x, final int y, final short z)
+
+
+The order of the words does not matter.
+
+void method(int final: x, y, z)
+compliles to
+void method(final int x, final int y, final int z)
+
+
+Annotations are removed using a bang followed by an at-sign (!@).
+
+void method(final int @SuppressWarnings("hiding"): x, y, !@: z)
+compliles to
+void method(@SuppressWarnings("hiding") final int x,
+            @SuppressWarnings("hiding") final int y, final int z)
+

@@ -1,0 +1,17 @@
+Calling object constructors
+
+T n = (...);
+T n = new (...);
+
+
+Constructing arrays
+
+T[][] n = [...][...];
+
+T n = {...};  //already exists!
+
+T[][] n = [][] {...};
+
+int[] array = cond ? {trueelems...} : {falseelems...};
+//and other stuff where {} is used.
+
