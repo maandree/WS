@@ -1,0 +1,64 @@
+lambda expressions
+
+
+array programming with slicing
+
+
+goto, maybe with @SuppressWarnings("goto")
+
+
+primitives in generics
+
+
+functional programming
+
+
+SQL-like syntax for array searching
+
+
+unique parameters
+
+
+Object o;
+{
+    shadow Object o; //must be in inner scope
+}
+
+
+yeild
+
+
+# directives
+
+
+immutuable arrays
+
+
+bigger integers	128 bit, 256 bit, 512 bit and 1024 bit
+
+
+quantum computing (emulation if you do not have one)
+
+
+aspect-oriented programming
+
+
+LISP syntax
+
+
+jasmin, or some other assembly
+
+
+scripting with jash
+
+
+foreign code, maybe:
+
+        public class CCode
+        {
+            public native("C", "-lgpm") void CMethod(...)
+            {
+                //Code
+            }
+        }
+
