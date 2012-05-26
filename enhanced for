@@ -5,3 +5,7 @@ Offset and count may be specificed on enhanced for loops:
     for (T x : xs, off)
 
     for (T x : xs, off, len)
+
+If xs is neither an array nor an Iteratable;
+Enumerable, Iterator and Enumerator (in that order)
+should be checked.
