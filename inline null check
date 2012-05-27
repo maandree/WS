@@ -2,3 +2,24 @@ x?.y.z? ?? n
 
 returns x.y.z, but iff x or z is null,
 then n is returned.
+
+
+x?.y.z? ?? null
+
+is similar to not using ??.
+
+
+If you want to return something else iff
+null check passed (rather than failed),
+you can use
+
+x?.y.z? somethingElse ?? null
+
+you can combine this:
+
+x?.y.z? somethingElse ?? n
+
+
+If you want an ? on everything (all variables,
+root and dereferenced) you can use ??? instead
+of ??.

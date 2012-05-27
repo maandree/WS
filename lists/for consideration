@@ -28,6 +28,9 @@ Object o;
 yeild
 
 
+if+
+
+
 # directives
 
 
@@ -66,7 +69,7 @@ foreign code, maybe:
 interface for static methods and contructors, fixed via annotations
 
 
-operator overloading, can only be used inside quill brackets:
+operator overloading, can only be used inside quill brackets (⁅⁆):
 
     stuff   primary lookup, from TA:            secondary loopup, from TA (from TB tertiarly):
 
@@ -106,4 +109,51 @@ operator overloading, can only be used inside quill brackets:
     ~/~<    TA converseAbjunction(TB b)         static TR converseAbjunction(TA a, TB b)
     
     +>    +<    +>=    +<=    +/    +%      may not be used inside quill brackets
+
+
+unicode syntax:
+
+    !       ¬
+    -       −
+    *       ⋅   ∗   ×   ⨯
+    /       ∕   ÷
+    &&      ∧
+    ||      ∨
+    ~&&     ⊼   ↑
+    ~||     ⊽   ↓
+    ^       ⊻   ↮
+    ~^      ↔
+    ←       ~~<<
+    →       ~~>>
+    ↚       ~/~<<
+    ↛       ~/~>>
+    <<      «
+    >>      »
+    <<<     ⋘
+    >>>     ⋙
+    <<<<    ««
+    >>>>    »»
+    ??      ⁇
+    !?      ⁉
+    ?!      ⁈
+    !!      ‼
+    <--<    ⇽   ↢
+    >-->    ⇾   ↣
+    <-->    ⇿
+    true    ⊤
+    false   ⊥
+    null    ∅
+    <=      ≤   ≯
+    >=      ≥   ≮
+    <       ≱
+    >       ≰
+    
+    null !=     ∃
+    null ==     ∄
+    for         ∀
+    f(g(x))     (f ∘ g)(x)
+    instanceof  ⸮   ⋿
+    
+    possible for array programming and SQL-like syntax:
+        ∆∇∁∈∋∉∌⊂⊃⊄⊅⊆⊇⊈⊉⊊⊋∖∑∏⋈⋉⋊⟕⟖⟗⨝⨂⋁⋀∐⋂⋃
 
