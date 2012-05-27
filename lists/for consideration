@@ -62,3 +62,48 @@ foreign code, maybe:
             }
         }
 
+
+interface for static methods and contructors, fixed via annotations
+
+
+operator overloading, can only be used inside quill brackets:
+
+    stuff   primary lookup, from TA:            secondary loopup, from TA (from TB tertiarly):
+
+    +       TA add(TB b)                        static TR add(TA a, TB b)
+    -       TA subtract(TB b)                   static TR subtract(TA a, TB b)
+    -x      TA negate()                         static TR negate(TA a)
+    *       TA multiply(TB b)                   static TR multiply(TA a, TB b)
+    /       TA divide(TB b)                     static TR divide(TA a, TB b)
+    %       TA modulo(TB b)                     static TR modulo(TA a, TB b)
+    <       int compareTo(TB b) < 0             static int compareTo(TA a, TB b) < 0
+    >       int compareTo(TB b) > 0             static int compareTo(TA a, TB b) > 0
+    <=      int compareTo(TB b) <= 0            static int compareTo(TA a, TB b) <= 0
+    >=      int compareTo(TB b) >= 0            static int compareTo(TA a, TB b) >= 0
+    ==      int compareTo(TB b) == 0            static int compareTo(TA a, TB b) == 0
+    <=>     int compareTo(TB b)                 static int compareTo(TA a, TB b)
+    !=      int compareTo(TB b) != 0            static int compareTo(TA a, TB b) != 0
+    !       TA not()                            static TR not(TA a)
+    ~       TA invert()                         static TR invert(TA a)
+    &       TA and(TB b)                        static TR and(TA a, TB b)
+    |       TA or(TB b)                         static TR or(TA a, TB b)
+    ^       TA xor(TB b)                        static TR xor(TA a, TB b)
+    ~^      TA biconditional(TB b)              static TR biconditional(TA a, TB b)
+    <<      TA shiftLeft(TB b)                  static TR shiftLeft(TA a, TB b)
+    >>      TA shiftRight(TB b)                 static TR shiftRight(TA a, TB b)
+    <<<     TA fillShiftLeft(TB b)              static TR fillShiftLeft(TA a, TB b)
+    >>>     TA unsignedShiftRight(TB b)         static TR unsignedShiftRight(TA a, TB b)
+    <<<<    TA rotateLeft(TB b)                 static TR rotateLeft(TA a, TB b)
+    >>>>    TA rotateRight(TB b)                static TR rotateRight(TA a, TB b)
+    ==true  boolean isTrue()                    static boolean isTrue(TA a)
+    <>      TA reverseBits()                    static TR reverseBits(TA a)
+    <!>     TA reverseBytes()                   static TR reverseBytes(TA a)
+    ~&      TA nand(TB b)                       static TR nand(TA a, TB b)
+    ~|      TA nor(TB b)                        static TR nor(TA a, TB b)
+    ~~<     TA converseImplication(TB b)        static TR converseImplication(TA a, TB b)
+    ~~>     TA implication(TB b)                static TR implication(TA a, TB b)
+    ~/~>    TA abjunction(TB b)                 static TR abjunction(TA a, TB b)
+    ~/~<    TA converseAbjunction(TB b)         static TR converseAbjunction(TA a, TB b)
+    
+    +>    +<    +>=    +<=    +/    +%      may not be used inside quill brackets
+

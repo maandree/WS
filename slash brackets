@@ -18,8 +18,8 @@
 
 
 By putting a backslash (\) before, and upclose to, an opening bracket [(],
-\&&, \||, \^, \&  and \| can be used to reuse operations with precedence
-of <, > &a and lower with &&, ||, ^, & and |.
+\&&, \||, \^, \&, \| and other connectives can be used to reuse operations
+with precedence of <, > &a and lower with &&, ||, ^, &, |, &c.
 
 Keep in mind that the (in this case) left operand is not evaluated.
 \(x[i++] == a \|| b)   compiles to  ((x[i++] == a) || (x[i++] == b))
